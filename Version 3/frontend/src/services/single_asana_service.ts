@@ -8,6 +8,7 @@ export const getMorphemes = async (asanaId: string): Promise<Morfema[]> => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "Permissions-Policy":"private-state-token-redemption=(self)"
     },
   })
     .then((response) => {

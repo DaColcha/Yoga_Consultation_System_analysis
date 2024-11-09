@@ -8,6 +8,7 @@ export const getAsanas = async (): Promise<Asana[]> => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "Permissions-Policy":"private-state-token-redemption=(self)"
     },
   })
     .then((response) => {
@@ -31,6 +32,7 @@ export const getMorphemes = async (): Promise<MorfemaWithId[]> => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
+      "Permissions-Policy":"private-state-token-redemption=(self)"
     },
   })
     .then((response) => {
