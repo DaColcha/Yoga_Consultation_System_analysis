@@ -3,7 +3,6 @@
     "scripts": {
         "start": "nodemon ./src/index.js",
         "postinstall": "prisma generate"
-
     },
 
     "type": "commonjs",

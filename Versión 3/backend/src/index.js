@@ -6,7 +6,7 @@ const router_morfemas = require("./morfemas/routers.js");
 
 
 let corsOptions = {
-  origin: ['https://asanas-learn.000webhostapp.com/', 'http://localhost:8000'] // Compliant
+  origin: ['https://yoga-consultation-system-frontend.vercel.app/', 'http://localhost:3000'] // Compliant
 
 };
 
@@ -27,6 +27,6 @@ app.use("/", router_asanas);
 app.use("/", router_morfemas);
 
 // Activar el servidor
-app.listen(3000, () => {
-  console.log("Servidor escuchando en http://localhost:3000");
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Servidor escuchando");
 });

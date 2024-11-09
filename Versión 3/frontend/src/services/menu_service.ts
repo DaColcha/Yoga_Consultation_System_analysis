@@ -1,7 +1,9 @@
 import { Asana, MorfemaWithId } from "../../types";
 
+const api = `${process.env.BACKEND_API}`;
+
 export const getAsanas = async (): Promise<Asana[]> => {
-  const url = "https://asanar-learnig.vercel.app/Posturas";
+  const url = `${api}/Posturas`;
   return fetch(url, {
     method: "GET",
     headers: {
@@ -24,7 +26,7 @@ export const getAsanas = async (): Promise<Asana[]> => {
 };
 
 export const getMorphemes = async (): Promise<MorfemaWithId[]> => {
-  const url = "https://asanar-learnig.vercel.app/morfemas";
+  const url = `${api}/morfemas`;
   return fetch(url, {
     method: "GET",
     headers: {

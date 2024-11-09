@@ -1,7 +1,9 @@
 import { Morfema } from "../../types";
 
+const api = `${process.env.BACKEND_API}`;
+
 export const getMorphemes = async (asanaId: string): Promise<Morfema[]> => {
-  const url = `https://asanar-learnig.vercel.app/morfemas/${asanaId}`;
+  const url = `${api}/morfemas/${asanaId}`;
   return fetch(url, {
     method: "GET",
     headers: {
