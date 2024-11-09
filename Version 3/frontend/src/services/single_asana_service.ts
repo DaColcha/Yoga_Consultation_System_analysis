@@ -1,6 +1,6 @@
 import { Morfema } from "../../types";
 
-const api = `${process.env.BACKEND_API}`;
+const api = import.meta.env.VITE_BACKEND_API;
 
 export const getMorphemes = async (asanaId: string): Promise<Morfema[]> => {
   const url = `${api}/morfemas/${asanaId}`;

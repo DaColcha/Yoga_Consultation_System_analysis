@@ -1,6 +1,6 @@
 import { Asana, MorfemaWithId } from "../../types";
 
-const api = `${process.env.BACKEND_API}`;
+const api = import.meta.env.VITE_BACKEND_API;
 
 export const getAsanas = async (): Promise<Asana[]> => {
   const url = `${api}/Posturas`;
