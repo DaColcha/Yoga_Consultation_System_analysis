@@ -6,7 +6,7 @@ const router_morfemas = require("./morfemas/routers.js");
 
 
 let corsOptions = {
-  origin: ['https://yoga-consultation-system-frontend.vercel.app/', 'http://localhost:8000'] // Compliant
+  origin: ['https://yoga-consultation-system-frontend.vercel.app', 'http://localhost:8000'] // Compliant
 
 };
 
